@@ -9,7 +9,7 @@ interface SeriesPlayerViewProps {
     onClose: () => void;
 }
 
-export default function SeriesPlayerView({ show, onClose }: SeriesPlayerViewProps) {
+export default function SeriesPlayerView({ }: SeriesPlayerViewProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isMuted, setIsMuted] = useState(true);
 

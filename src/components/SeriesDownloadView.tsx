@@ -9,7 +9,7 @@ interface SeriesDownloadViewProps {
     onClose: () => void;
 }
 
-export default function SeriesDownloadView({ show }: SeriesDownloadViewProps) {
+export default function SeriesDownloadView({ }: SeriesDownloadViewProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isMuted, setIsMuted] = useState(true);
 
