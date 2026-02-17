@@ -20,8 +20,8 @@ export default function Footer() {
                         </p>
 
                         <div className="flex gap-6 opacity-60 hover:opacity-100 transition-opacity">
-                            <button className="w-[25px] h-[25px]"><img src={assets.imgVector} className="w-full h-full" alt="Facebook" /></button>
-                            <button className="w-[25px] h-[25px]"><img src={assets.imgVector1} className="w-full h-full" alt="Twitter" /></button>
+                            <button className="w-[25px] h-[25px]"><img src={assets.imgVector1} className="w-full h-full" alt="Facebook" /></button>
+                            <button className="w-[25px] h-[25px]"><img src={assets.imgVector} className="w-full h-full" alt="X / Twitter" /></button>
                             <button className="w-[25px] h-[25px] flex items-center justify-center bg-transparent"><img src={assets.imgVector3} className="w-full h-full scale-125" alt="Instagram" /></button>
                         </div>
                     </div>
