@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Plus, Minus, Mail, Phone, User, Send } from 'lucide-react';
+import { Plus, Minus, Mail, Phone, ChevronDown } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
+import { assets } from '../assets/figma_assets';
 
 export default function ContactUs() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -30,72 +31,83 @@ export default function ContactUs() {
     ];
 
     return (
-        <div className="pt-32 pb-20 min-h-screen">
+        <div className="pt-32 pb-20 min-h-screen relative overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute top-0 left-0 w-full h-[1200px] pointer-events-none -z-10">
+                <img
+                    src={assets.imgBg}
+                    alt="Background"
+                    className="w-full h-full object-cover opacity-30 mask-image-b-fade"
+                    style={{ maskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#040406]/80 via-[#040406]/90 to-[#040406]" />
+            </div>
+
             {/* Contact Form Section */}
-            <section className="container mx-auto px-6 relative mb-32">
+            <section className="container mx-auto px-6 relative mb-32 z-10">
                 {/* Center Title */}
                 <ScrollAnimation>
-                    <h2 className="text-4xl md:text-[56px] font-bold text-center mb-16">We’re Here to Help</h2>
+                    <h2 className="text-4xl md:text-[64px] font-bold text-center mb-16 tracking-tight leading-none">We’re Here to Help</h2>
                 </ScrollAnimation>
 
-                <div className="flex flex-col lg:flex-row justify-center gap-12 lg:gap-24">
+                <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24 items-start max-w-6xl mx-auto">
                     {/* Left: Contact Info */}
-                    <div className="lg:w-[400px] flex flex-col gap-10 pt-8">
+                    <div className="lg:w-[400px] flex flex-col gap-10 pt-4">
                         <ScrollAnimation delay={0.1}>
-                            <div className="flex gap-6 items-start">
-                                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                                    <Mail className="text-[#009cdb]" size={24} />
-                                </div>
+                            <div className="flex gap-5 items-start">
+                                <Mail className="text-[#009cdb] shrink-0 mt-1" size={32} />
                                 <div>
-                                    <p className="text-white/50 text-sm mb-1 uppercase tracking-wider font-bold">Email</p>
-                                    <a href="mailto:support@fasttv.app" className="block text-2xl font-medium hover:text-[#009cdb] transition-colors mb-2">support@fasttv.app</a>
-                                    <p className="text-white/50 text-sm mb-1 uppercase tracking-wider font-bold mt-4">Partnerships</p>
-                                    <a href="mailto:partnerships@fasttv.app" className="block text-2xl font-medium hover:text-[#009cdb] transition-colors">partnerships@fasttv.app</a>
+                                    <p className="text-white/50 text-xs mb-1 uppercase tracking-wider font-semibold">Email</p>
+                                    <a href="mailto:support@fasttv.app" className="block text-xl font-medium hover:text-[#009cdb] transition-colors mb-1">support@fasttv.app</a>
+                                    <p className="text-white/50 text-xs mt-3 mb-1 uppercase tracking-wider font-semibold">Email</p>
+                                    <a href="mailto:partnerships@fasttv.app" className="block text-xl font-medium hover:text-[#009cdb] transition-colors">partnerships@fasttv.app</a>
                                 </div>
                             </div>
                         </ScrollAnimation>
 
                         <ScrollAnimation delay={0.2}>
-                            <div className="flex gap-6 items-start">
-                                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                                    <Phone className="text-[#009cdb]" size={24} />
-                                </div>
+                            <div className="flex gap-5 items-start">
+                                <Phone className="text-[#009cdb] shrink-0 mt-1" size={32} />
                                 <div>
-                                    <p className="text-white/50 text-sm mb-1 uppercase tracking-wider font-bold">Phone Number</p>
-                                    <p className="text-2xl font-medium">+44 07466 331893</p>
+                                    <p className="text-white/50 text-xs mb-1 uppercase tracking-wider font-semibold">Phone Number</p>
+                                    <p className="text-xl font-medium">+44 07466 331893</p>
                                 </div>
                             </div>
                         </ScrollAnimation>
                     </div>
 
                     {/* Right: Form */}
-                    <div className="lg:w-[500px]">
+                    <div className="lg:w-[600px] w-full">
                         <ScrollAnimation delay={0.3}>
-                            <form className="space-y-6">
-                                <div className="bg-[#1d1d1e] border border-white/10 rounded-xl px-5 py-4 focus-within:border-[#009cdb] transition-colors">
-                                    <label className="block text-xs uppercase tracking-wider text-white/40 font-bold mb-1">Name</label>
-                                    <input type="text" className="w-full bg-transparent border-none outline-none text-white text-lg placeholder-white/20" placeholder="Your Name" />
+                            <form className="space-y-4">
+                                <div className="bg-[#18181a] rounded-[10px] px-5 py-3 border border-transparent focus-within:border-white/20 transition-all">
+                                    <label className="block text-[11px] text-white/40 mb-1">Name</label>
+                                    <input type="text" className="w-full bg-transparent border-none outline-none text-white text-base placeholder-transparent" />
                                 </div>
-                                <div className="bg-[#1d1d1e] border border-white/10 rounded-xl px-5 py-4 focus-within:border-[#009cdb] transition-colors">
-                                    <label className="block text-xs uppercase tracking-wider text-white/40 font-bold mb-1">Email</label>
-                                    <input type="email" className="w-full bg-transparent border-none outline-none text-white text-lg placeholder-white/20" placeholder="your@email.com" />
-                                </div>
-                                <div className="bg-[#1d1d1e] border border-white/10 rounded-xl px-5 py-4 focus-within:border-[#009cdb] transition-colors flex gap-4">
-                                    <div className="shrink-0 border-r border-white/10 pr-4 flex items-center gap-2">
-                                        <span className="text-white font-medium">+91</span>
-                                    </div>
-                                    <div className="flex-1">
-                                        <label className="block text-xs uppercase tracking-wider text-white/40 font-bold mb-1">Phone</label>
-                                        <input type="tel" className="w-full bg-transparent border-none outline-none text-white text-lg placeholder-white/20" placeholder="98765 43210" />
-                                    </div>
-                                </div>
-                                <div className="bg-[#1d1d1e] border border-white/10 rounded-xl px-5 py-4 focus-within:border-[#009cdb] transition-colors">
-                                    <label className="block text-xs uppercase tracking-wider text-white/40 font-bold mb-1">Message</label>
-                                    <textarea rows={4} className="w-full bg-transparent border-none outline-none text-white text-lg placeholder-white/20 resize-none" placeholder="How can we help?" />
+                                <div className="bg-[#18181a] rounded-[10px] px-5 py-3 border border-transparent focus-within:border-white/20 transition-all">
+                                    <label className="block text-[11px] text-white/40 mb-1">Email</label>
+                                    <input type="email" className="w-full bg-transparent border-none outline-none text-white text-base placeholder-transparent" />
                                 </div>
 
-                                <button type="submit" className="w-full bg-white text-black font-bold text-lg py-4 rounded-xl hover:bg-[#009cdb] hover:text-white transition-all transform active:scale-95 flex items-center justify-center gap-2">
-                                    <Send size={20} />
+                                <div className="flex bg-[#18181a] rounded-[10px] border border-transparent focus-within:border-white/20 transition-all overflow-hidden">
+                                    <div className="px-4 py-3 bg-[#252527] flex items-center gap-2 cursor-pointer border-r border-white/5 min-w-[100px] justify-between">
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-lg">🇮🇳</span>
+                                            <span className="text-white text-sm font-medium">+91</span>
+                                        </div>
+                                        <ChevronDown size={14} className="text-white/50" />
+                                    </div>
+                                    <div className="flex-1 px-5 py-3">
+                                        <input type="tel" className="w-full bg-transparent border-none outline-none text-white text-base placeholder-white/30" placeholder="91310 74348" />
+                                    </div>
+                                </div>
+
+                                <div className="bg-[#18181a] rounded-[10px] px-5 py-3 border border-transparent focus-within:border-white/20 transition-all h-[140px]">
+                                    <label className="block text-[11px] text-white/40 mb-1">Message</label>
+                                    <textarea className="w-full h-full bg-transparent border-none outline-none text-white text-base placeholder-transparent resize-none p-0" />
+                                </div>
+
+                                <button type="submit" className="w-full bg-white text-black font-bold text-sm py-4 rounded-[10px] hover:bg-gray-100 transition-all mt-4">
                                     Send Message
                                 </button>
                             </form>
@@ -105,42 +117,37 @@ export default function ContactUs() {
             </section>
 
             {/* FAQ Section */}
-            <section className="container mx-auto px-6">
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 relative">
-                    {/* Background Elements */}
-                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10 opacity-20">
-                        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-500/20 blur-[120px] rounded-full" />
-                    </div>
-
+            <section className="container mx-auto px-6 pt-20 border-t border-white/5">
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 relative max-w-6xl mx-auto">
                     {/* Left: Header */}
                     <div className="lg:w-1/3">
                         <ScrollAnimation>
-                            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                                Got questions?<br />We have the answers
-                            </h1>
-                            <p className="text-lg text-white/60 leading-relaxed">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                                Got questions? We have the answers
+                            </h2>
+                            <p className="text-base text-white/60 leading-relaxed">
                                 FastTV is all about quick, addictive short-drama series. Here are answers to the most common questions to help you get started.
                             </p>
                         </ScrollAnimation>
                     </div>
 
                     {/* Right: Accordion */}
-                    <div className="lg:w-2/3 space-y-4">
+                    <div className="lg:w-2/3 space-y-0">
                         {faqs.map((faq, index) => (
                             <ScrollAnimation key={index} delay={index * 0.1}>
                                 <div
-                                    className="border-b border-white/10 pb-6 cursor-pointer group"
+                                    className="border-b border-white/10 py-6 cursor-pointer group first:border-t"
                                     onClick={() => toggleFaq(index)}
                                 >
-                                    <div className="flex justify-between items-center py-2">
-                                        <h3 className="text-xl font-medium text-white group-hover:text-[#009cdb] transition-colors">
+                                    <div className="flex justify-between items-center">
+                                        <h3 className="text-lg font-medium text-white group-hover:text-[#009cdb] transition-colors pr-8">
                                             {faq.question}
                                         </h3>
-                                        <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 group-hover:bg-white/10 transition-colors">
+                                        <div className="shrink-0">
                                             {openFaq === index ? (
-                                                <Minus size={18} className="text-[#009cdb]" />
+                                                <Minus size={20} className="text-white" />
                                             ) : (
-                                                <Plus size={18} className="text-white" />
+                                                <Plus size={20} className="text-white" />
                                             )}
                                         </div>
                                     </div>
@@ -150,7 +157,7 @@ export default function ContactUs() {
                                         transition={{ duration: 0.3 }}
                                         className="overflow-hidden"
                                     >
-                                        <p className="text-white/60 pt-2 pb-2 leading-relaxed text-lg">
+                                        <p className="text-white/60 pt-4 leading-relaxed text-base">
                                             {faq.answer}
                                         </p>
                                     </motion.div>
