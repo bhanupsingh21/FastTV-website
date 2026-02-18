@@ -36,7 +36,7 @@ export default function TopSeries() {
 
                 {/* Hero Content */}
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pt-[90px]">
-                    <h1 className="text-[64px] md:text-[80px] font-bold leading-tight tracking-tight">
+                    <h1 className="text-4xl md:text-[80px] font-bold leading-tight tracking-tight">
                         Explore Our Top Series
                     </h1>
                     <p className="text-[20px] text-white/80 mt-4">
@@ -59,7 +59,7 @@ export default function TopSeries() {
             </div>
 
             {/* Genre Filter Tabs */}
-            <div className="px-24 mt-8">
+            <div className="px-6 md:px-24 mt-8">
                 <div className="flex flex-wrap gap-3">
                     {genres.map((genre) => (
                         <button
@@ -77,7 +77,7 @@ export default function TopSeries() {
             </div>
 
             {/* Ranked Show Grid */}
-            <div className="px-24 mt-10 pb-20">
+            <div className="px-6 md:px-24 mt-10 pb-20">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-6 gap-y-10">
                     {topSeriesShows.map((show) => (
                         <div key={show.rank} className="relative group cursor-pointer">

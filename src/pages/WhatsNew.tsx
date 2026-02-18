@@ -41,7 +41,7 @@ export default function WhatsNew() {
 
                 {/* Hero Content */}
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pt-[90px]">
-                    <h1 className="text-[64px] md:text-[80px] font-bold leading-tight tracking-tight">
+                    <h1 className="text-4xl md:text-[80px] font-bold leading-tight tracking-tight">
                         What's New on FastTV
                     </h1>
                     <p className="text-[20px] text-white/80 mt-4">
@@ -64,7 +64,7 @@ export default function WhatsNew() {
             </div>
 
             {/* Coming Soon Section */}
-            <div className="px-24 mt-8 pb-20">
+            <div className="px-6 md:px-24 mt-8 pb-20">
                 <h2 className="text-[20px] font-bold text-[#00e5ff] italic mb-8">Coming soon...</h2>
 
                 {/* Show Grid */}

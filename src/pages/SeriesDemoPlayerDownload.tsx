@@ -57,7 +57,7 @@ export default function SeriesDemoPlayerDownload() {
                 {/* Right Side: Content & Download */}
                 <div className="flex flex-col items-start max-w-lg text-white">
                     {/* QR Code Section */}
-                    <div className="mb-10 flex flex-col items-center md:items-start">
+                    <div className="mb-10 flex flex-col items-center md:items-start hidden md:flex">
                         {/* Using imgQrCodeForMobileEnglishWikipedia1 if available, otherwise a placeholder or generic QR */}
                         <div className="bg-white p-2 rounded-xl mb-4 w-[165px] h-[165px]">
                             {/* Fallback QR or mapped asset */}
@@ -67,21 +67,24 @@ export default function SeriesDemoPlayerDownload() {
                     </div>
 
                     {/* Text Content */}
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                        Watch the Full Story<br />on FastTV
-                    </h1>
-                    <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                        Download the FastTV app to watch the complete series with full episodes and uninterrupted storytelling.
-                    </p>
+                    {/* Text Content */}
+                    <div className="text-center md:text-left">
+                        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                            Watch the Full Story<br />on FastTV
+                        </h1>
+                        <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed max-w-[320px] mx-auto md:mx-0">
+                            Download the FastTV app to watch the complete series with full episodes and uninterrupted storytelling.
+                        </p>
 
-                    {/* Download Buttons */}
-                    <div className="flex items-center gap-3">
-                        <a href="#" className="inline-flex shrink-0 hover:scale-105 transition-transform">
-                            <img src={assets.img2} alt="Google Play" className="h-[42px] w-auto" />
-                        </a>
-                        <a href="#" className="inline-flex shrink-0 hover:scale-105 transition-transform">
-                            <img src={assets.img1} alt="App Store" className="h-[42px] w-auto" />
-                        </a>
+                        {/* Download Buttons */}
+                        <div className="flex items-center justify-center md:justify-start gap-3">
+                            <a href="#" className="inline-flex shrink-0 hover:scale-105 transition-transform">
+                                <img src={assets.img2} alt="Google Play" className="h-[42px] w-auto" />
+                            </a>
+                            <a href="#" className="inline-flex shrink-0 hover:scale-105 transition-transform">
+                                <img src={assets.img1} alt="App Store" className="h-[42px] w-auto" />
+                            </a>
+                        </div>
                     </div>
                 </div>
 

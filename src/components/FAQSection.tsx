@@ -52,7 +52,7 @@ export default function FAQSection() {
             <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-24">
                 {/* Left Side: Heading */}
                 <div className="lg:w-1/3 pt-10">
-                    <h2 className="text-[39px] font-bold text-white leading-tight mb-6">
+                    <h2 className="text-3xl md:text-[39px] font-bold text-white leading-tight mb-6">
                         Got Questions?<br />
                         We’re Here.
                     </h2>

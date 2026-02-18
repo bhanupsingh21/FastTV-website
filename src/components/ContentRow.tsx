@@ -10,6 +10,8 @@ export interface Show {
     category?: string;
     isNew?: boolean;
     videoUrl?: string;
+    logo?: string;
+    logoClassName?: string;
 }
 
 interface ContentRowProps {
@@ -32,10 +34,10 @@ export default function ContentRow({ title, shows, onShowClick }: ContentRowProp
     return (
         <div className="pt-12 pb-8 space-y-4 relative group/row">
             <div className="container mx-auto px-6 flex justify-between items-center mb-6">
-                <h2 className="text-[21px] font-bold text-white flex items-center gap-2 group cursor-pointer whitespace-nowrap">
+                <h2 className="text-lg md:text-[21px] font-bold text-white flex items-center gap-2 group cursor-pointer whitespace-nowrap">
                     {title}
                 </h2>
-                <div className="flex gap-4">
+                <div className="hidden md:flex gap-4">
                     <button
                         onClick={() => scroll('left')}
                         className="w-[34px] h-[34px] rounded-full border border-white/20 bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"

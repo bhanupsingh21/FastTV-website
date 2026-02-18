@@ -116,6 +116,24 @@ import videoHero_src from './figma/fasttv_hero.mp4';
 import mobileFrame_src from './figma/mobile_frame.png';
 import imgNavigationLogo_src from './figma/navigation_fastTV_logo.svg';
 
+// Experience It on FastTV (New Assets)
+import imgNaagin_src from './figma/naginkabadla_image.png';
+import imgBadass_src from './figma/badass_image.png';
+import imgSanak_src from './figma/sanak_image.png';
+import imgBinni_src from './figma/binni_image.png';
+import imgHasratein3_src from './figma/hasratein_image.png';
+import imgRedRoom_src from './figma/redroom_image.png';
+import imgJudwaJaal_src from './figma/judwajaal_image.png';
+
+// Logos
+import imgNaaginLogo_src from './figma/naginkabadla.png';
+import imgBadassLogo_src from './figma/badass.png';
+import imgSanakLogo_src from './figma/snanak_logo.png';
+import imgBinniLogo_src from './figma/binni_logo.png';
+import imgHasrateinLogo_src from './figma/hasratein.png';
+import imgRedRoomLogo_src from './figma/redroom.png';
+import imgJudwaJaalLogo_src from './figma/judwajaal.png';
+
 export const assets = {
   mobileFrame: mobileFrame_src,
   videoHero: videoHero_src,
@@ -232,4 +250,20 @@ export const assets = {
   wnKaamraj: wnKaamraj_src,
   // Videos
   videoDemo: videoDemo_src,
+  // New Experience It on FastTV assets
+  imgNaagin: imgNaagin_src,
+  imgBadass: imgBadass_src,
+  imgSanak: imgSanak_src,
+  imgBinni: imgBinni_src,
+  imgHasratein3: imgHasratein3_src,
+  imgRedRoom: imgRedRoom_src,
+  imgJudwaJaal: imgJudwaJaal_src,
+  // Logos
+  imgNaaginLogo: imgNaaginLogo_src,
+  imgBadassLogo: imgBadassLogo_src,
+  imgSanakLogo: imgSanakLogo_src,
+  imgBinniLogo: imgBinniLogo_src,
+  imgHasrateinLogo: imgHasrateinLogo_src,
+  imgRedRoomLogo: imgRedRoomLogo_src,
+  imgJudwaJaalLogo: imgJudwaJaalLogo_src,
 };

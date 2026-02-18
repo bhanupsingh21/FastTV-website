@@ -14,31 +14,31 @@ export default function Hero() {
 
             {/* Content */}
             <div className="relative z-10 container mx-auto px-6 h-full flex items-center">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full mt-40">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full mt-24 md:mt-32 lg:mt-40">
                     {/* Left Column: Text Content */}
                     <motion.div
-                        className="flex flex-col gap-6 pb-20"
+                        className="flex flex-col gap-6 pb-12 lg:pb-20 text-center lg:text-left items-center lg:items-start"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-[72px] font-bold text-white leading-tight">
-                            Stories That Stay <br />
+                        <h1 className="text-4xl md:text-6xl lg:text-[72px] font-bold text-white leading-tight">
+                            Stories That Stay <br className="hidden md:block" />
                             With You In <span className="text-[#009cdb]">Just</span>
                             <br />
                             <span className="text-[#009cdb]">90 Seconds</span>
                         </h1>
-                        <p className="text-[24px] text-white/80 max-w-[600px] leading-normal tracking-[0.48px]">
+                        <p className="text-lg md:text-xl lg:text-[24px] text-white/80 max-w-[600px] leading-normal tracking-[0.48px]">
                             90 seconds. Real emotions. Premium micro dramas from Hungama — crafted with care, made for you.
                         </p>
 
-                        <div className="flex flex-col gap-2 mt-10">
-                            <p className="text-white text-lg font-medium">Download FastTV App</p>
+                        <div className="flex flex-col gap-2 mt-6 lg:mt-10 items-center lg:items-start">
+                            <p className="text-white text-base lg:text-lg font-medium">Download FastTV App</p>
                             <div className="flex gap-4">
-                                <button className="h-[50px] w-[160px] hover:opacity-90 transition-opacity">
+                                <button className="h-[40px] w-[130px] md:h-[50px] md:w-[160px] hover:opacity-90 transition-opacity">
                                     <img src={assets.img1} alt="App Store" className="h-full w-full object-contain" />
                                 </button>
-                                <button className="h-[50px] w-[160px] hover:opacity-90 transition-opacity">
+                                <button className="h-[40px] w-[130px] md:h-[50px] md:w-[160px] hover:opacity-90 transition-opacity">
                                     <img src={assets.img2} alt="Google Play" className="h-full w-full object-contain" />
                                 </button>
                             </div>
@@ -46,7 +46,7 @@ export default function Hero() {
                     </motion.div>
 
                     {/* Right Column: Phone Mockup & Carousel */}
-                    <div className="hidden lg:flex items-center justify-center gap-8 relative h-[700px]">
+                    <div className="flex items-center justify-center gap-8 relative h-[500px] md:h-[600px] lg:h-[700px] mt-8 lg:mt-0">
                         <HeroPhoneCarousel />
                     </div>
                 </div>

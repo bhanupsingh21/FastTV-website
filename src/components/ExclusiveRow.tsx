@@ -81,11 +81,20 @@ const ExclusiveCard = ({ show, onClick }: { show: Show; onClick: () => void }) =
                 {/* Title Gradient - Always visible but adjusts */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent pointer-events-none" />
 
-                <div className="absolute bottom-4 left-4 z-20 pointer-events-none">
-                    <h3 className="text-[16px] font-bold text-white leading-tight drop-shadow-md">
-                        {show.title}
-                    </h3>
-                </div>
+                {/* Logo or Title */}
+                {show.logo ? (
+                    <img
+                        src={show.logo}
+                        alt={show.title}
+                        className={`absolute bottom-4 left-1/2 -translate-x-1/2 origin-bottom-left z-20 w-auto object-contain drop-shadow-md transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover/card:left-[20px] group-hover/card:translate-x-0 group-hover/card:scale-50 ${show.logoClassName || 'h-[55px]'}`}
+                    />
+                ) : (
+                    <div className="absolute bottom-6 left-0 right-0 z-20 pointer-events-none flex justify-center px-4">
+                        <h3 className="text-[16px] font-bold text-white leading-tight drop-shadow-md text-center">
+                            {show.title}
+                        </h3>
+                    </div>
+                )}
 
             </motion.div>
         </div>

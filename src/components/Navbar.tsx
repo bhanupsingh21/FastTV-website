@@ -39,17 +39,16 @@ export default function Navbar() {
             )}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
-                {/* Logo Section */}
-                <div className="flex items-center gap-12">
+                {/* Logo Section (Desktop) */}
+                <div className="hidden lg:flex items-center gap-12">
                     <Link to="/" className="relative w-[129px] h-[35px] flex items-center">
-                        {/* Colored logo composed of 4 SVG parts from Figma */}
                         <div className="relative w-full h-full flex items-center justify-center">
                             <img src={assets.imgNavigationLogo} className="h-full w-auto object-contain" alt="FastTV Logo" />
                         </div>
                     </Link>
 
                     {/* Desktop Links */}
-                    <div className="hidden lg:flex items-center gap-8 ml-8">
+                    <div className="flex items-center gap-8 ml-8">
                         {navLinks.map((link) => (
                             <div key={link.name} className="relative h-[90px] flex items-center justify-center">
                                 <Link
@@ -69,7 +68,35 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                {/* Right Actions */}
+                {/* Mobile Header (Figma Design) */}
+                <div className="lg:hidden flex items-center justify-between w-full">
+                    {/* Left: Logo Icon + Text */}
+                    <Link to="/" className="flex items-center gap-3">
+                        <div className="w-[48px] h-[48px] rounded-[13px] border border-white/20 overflow-hidden shrink-0">
+                            {/* Using a placeholder or existing logo as icon if available, ensuring aspect fit */}
+                            <img src={assets.imgNavigationLogo} className="w-full h-full object-cover scale-150" alt="FastTV" />
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-[14px] font-bold text-white leading-tight tracking-wide">FastTV</span>
+                            <span className="text-[13px] text-white/60 leading-tight tracking-wide">Short videos, series</span>
+                        </div>
+                    </Link>
+
+                    {/* Right: Download + Menu */}
+                    <div className="flex items-center gap-3">
+                        <button className="bg-[#007aff] px-3 py-2 rounded-full text-white text-[11px] font-bold">
+                            Download
+                        </button>
+                        <button
+                            className="text-white"
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        >
+                            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    </div>
+                </div>
+
+                {/* Desktop Right Actions */}
                 <div className="hidden lg:flex items-center gap-6">
                     <div className="bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.1)] rounded-[12px] px-4 py-3 flex items-center gap-2 cursor-pointer hover:bg-[rgba(255,255,255,0.2)] transition-colors">
                         <div className="w-4 h-4 relative">
@@ -78,14 +105,6 @@ export default function Navbar() {
                         <span className="text-[13px] font-bold text-white">Download App</span>
                     </div>
                 </div>
-
-                {/* Mobile Toggle */}
-                <button
-                    className="lg:hidden text-white"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                    {mobileMenuOpen ? <X /> : <Menu />}
-                </button>
             </div>
 
             {/* Mobile Menu */}
@@ -116,6 +135,6 @@ export default function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>
+        </nav >
     );
 }

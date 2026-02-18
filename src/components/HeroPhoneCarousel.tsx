@@ -27,9 +27,9 @@ export default function HeroPhoneCarousel() {
     };
 
     return (
-        <div className="flex items-center gap-16 h-full">
+        <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-16 h-full">
             {/* Phone Mockup Container */}
-            <div className="relative w-[393px] h-[786px] z-10 flex items-center justify-center">
+            <div className="relative w-[250px] h-[500px] md:w-[300px] md:h-[600px] lg:w-[393px] lg:h-[786px] z-10 flex items-center justify-center transition-all duration-300">
                 {/* Phone Frame Image */}
                 <img
                     src={assets.mobileFrame}
@@ -39,7 +39,7 @@ export default function HeroPhoneCarousel() {
 
                 {/* Video Content Container - Positioned to fit inside the frame */}
                 {/* Adjusting width/height/rounding to fit standard mobile frame assets */}
-                <div className="relative w-[90%] h-[96%] bg-black rounded-[40px] overflow-hidden z-10">
+                <div className="relative w-[90%] h-[96%] bg-black rounded-[25px] md:rounded-[32px] lg:rounded-[40px] overflow-hidden z-10">
                     <video
                         src={assets.videoHero}
                         className="absolute inset-0 w-full h-full object-cover"
@@ -53,16 +53,16 @@ export default function HeroPhoneCarousel() {
                 </div>
 
                 {/* Bottom Gradient Fade - Blends phone into background */}
-                <div className="absolute bottom-[-2px] left-[-2px] right-[-2px] h-[240px] bg-gradient-to-t from-[#040406] via-[#040406] to-transparent z-30 pointer-events-none" />
+                <div className="absolute bottom-[-2px] left-[-2px] right-[-2px] h-[150px] md:h-[200px] lg:h-[240px] bg-gradient-to-t from-[#040406] via-[#040406] to-transparent z-30 pointer-events-none" />
             </div>
 
-            {/* Vertical Thumbs Navigation */}
-            <div className="flex flex-col gap-6">
+            {/* Vertical Thumbs Navigation - Hidden on small mobile, visible on md+ */}
+            <div className="hidden md:flex flex-col gap-4 lg:gap-6">
                 {carouselData.map((item, index) => (
                     <button
                         key={item.id}
                         onClick={() => handleThumbnailClick(index)}
-                        className={`relative w-[70px] h-[95px] rounded-lg overflow-hidden transition-all duration-300 border-2 ${activeIndex === index ? 'border-[#009cdb] scale-110' : 'border-transparent opacity-60 hover:opacity-100'
+                        className={`relative w-[50px] h-[70px] lg:w-[70px] lg:h-[95px] rounded-lg overflow-hidden transition-all duration-300 border-2 ${activeIndex === index ? 'border-[#009cdb] scale-110' : 'border-transparent opacity-60 hover:opacity-100'
                             }`}
                     >
                         <img src={item.image} alt={item.title} className="w-full h-full object-cover" />

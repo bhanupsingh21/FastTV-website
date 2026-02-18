@@ -37,7 +37,7 @@ export default function AboutUs() {
                 </div>
 
                 {/* Mission Section - Split Layout with Phone Mockup */}
-                <div className="container mx-auto px-24 py-20 relative">
+                <div className="container mx-auto px-6 md:px-24 py-12 md:py-20 relative">
                     <div className="flex flex-col md:flex-row items-center gap-16">
                         {/* Text Content */}
                         <div className="max-w-[500px] flex-1">

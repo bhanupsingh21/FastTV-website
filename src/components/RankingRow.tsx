@@ -23,10 +23,10 @@ export default function RankingRow({ title = "Top 10 Series", shows, onShowClick
     return (
         <div className="pt-12 pb-10 space-y-4">
             <div className="container mx-auto px-6 flex justify-between items-center mb-6">
-                <h2 className="text-[21px] font-bold text-white whitespace-nowrap flex items-center gap-4">
+                <h2 className="text-lg md:text-[21px] font-bold text-white whitespace-nowrap flex items-center gap-4">
                     {title}
                 </h2>
-                <div className="flex gap-4">
+                <div className="hidden md:flex gap-4">
                     <button
                         onClick={() => scroll('left')}
                         className="w-[34px] h-[34px] rounded-full border border-white/20 bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
