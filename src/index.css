@@ -14,15 +14,11 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Product Sans';
-  src: url('./assets/fonts/FontsFree-Net-ProductSans-Medium.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
+/* Relying on browser synthetic bold for 700 since we lack a Bold font file */
 
 @theme {
   --font-product-sans: 'Product Sans', 'Outfit', 'Inter', sans-serif;
+  --font-sans: 'Product Sans', 'Outfit', 'Inter', sans-serif;
   --color-brand-blue: #009cdb;
   --color-brand-bg: #040406;
 
