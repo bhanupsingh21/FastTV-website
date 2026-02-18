@@ -31,65 +31,8 @@ export default function ContactUs() {
 
     return (
         <div className="pt-32 pb-20 min-h-screen">
-            {/* FAQ Section */}
-            <section className="container mx-auto px-6 mb-32">
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 relative">
-                    {/* Background Elements */}
-                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10 opacity-20">
-                        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-500/20 blur-[120px] rounded-full" />
-                    </div>
-
-                    {/* Left: Header */}
-                    <div className="lg:w-1/3">
-                        <ScrollAnimation>
-                            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                                Got questions?<br />We have the answers
-                            </h1>
-                            <p className="text-lg text-white/60 leading-relaxed">
-                                FastTV is all about quick, addictive short-drama series. Here are answers to the most common questions to help you get started.
-                            </p>
-                        </ScrollAnimation>
-                    </div>
-
-                    {/* Right: Accordion */}
-                    <div className="lg:w-2/3 space-y-4">
-                        {faqs.map((faq, index) => (
-                            <ScrollAnimation key={index} delay={index * 0.1}>
-                                <div
-                                    className="border-b border-white/10 pb-6 cursor-pointer group"
-                                    onClick={() => toggleFaq(index)}
-                                >
-                                    <div className="flex justify-between items-center py-2">
-                                        <h3 className="text-xl font-medium text-white group-hover:text-[#009cdb] transition-colors">
-                                            {faq.question}
-                                        </h3>
-                                        <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 group-hover:bg-white/10 transition-colors">
-                                            {openFaq === index ? (
-                                                <Minus size={18} className="text-[#009cdb]" />
-                                            ) : (
-                                                <Plus size={18} className="text-white" />
-                                            )}
-                                        </div>
-                                    </div>
-                                    <motion.div
-                                        initial={false}
-                                        animate={{ height: openFaq === index ? 'auto' : 0, opacity: openFaq === index ? 1 : 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="overflow-hidden"
-                                    >
-                                        <p className="text-white/60 pt-2 pb-2 leading-relaxed text-lg">
-                                            {faq.answer}
-                                        </p>
-                                    </motion.div>
-                                </div>
-                            </ScrollAnimation>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* Contact Form Section */}
-            <section className="container mx-auto px-6 relative">
+            <section className="container mx-auto px-6 relative mb-32">
                 {/* Center Title */}
                 <ScrollAnimation>
                     <h2 className="text-4xl md:text-[56px] font-bold text-center mb-16">We’re Here to Help</h2>
@@ -157,6 +100,63 @@ export default function ContactUs() {
                                 </button>
                             </form>
                         </ScrollAnimation>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="container mx-auto px-6">
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 relative">
+                    {/* Background Elements */}
+                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10 opacity-20">
+                        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-500/20 blur-[120px] rounded-full" />
+                    </div>
+
+                    {/* Left: Header */}
+                    <div className="lg:w-1/3">
+                        <ScrollAnimation>
+                            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                                Got questions?<br />We have the answers
+                            </h1>
+                            <p className="text-lg text-white/60 leading-relaxed">
+                                FastTV is all about quick, addictive short-drama series. Here are answers to the most common questions to help you get started.
+                            </p>
+                        </ScrollAnimation>
+                    </div>
+
+                    {/* Right: Accordion */}
+                    <div className="lg:w-2/3 space-y-4">
+                        {faqs.map((faq, index) => (
+                            <ScrollAnimation key={index} delay={index * 0.1}>
+                                <div
+                                    className="border-b border-white/10 pb-6 cursor-pointer group"
+                                    onClick={() => toggleFaq(index)}
+                                >
+                                    <div className="flex justify-between items-center py-2">
+                                        <h3 className="text-xl font-medium text-white group-hover:text-[#009cdb] transition-colors">
+                                            {faq.question}
+                                        </h3>
+                                        <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 group-hover:bg-white/10 transition-colors">
+                                            {openFaq === index ? (
+                                                <Minus size={18} className="text-[#009cdb]" />
+                                            ) : (
+                                                <Plus size={18} className="text-white" />
+                                            )}
+                                        </div>
+                                    </div>
+                                    <motion.div
+                                        initial={false}
+                                        animate={{ height: openFaq === index ? 'auto' : 0, opacity: openFaq === index ? 1 : 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="overflow-hidden"
+                                    >
+                                        <p className="text-white/60 pt-2 pb-2 leading-relaxed text-lg">
+                                            {faq.answer}
+                                        </p>
+                                    </motion.div>
+                                </div>
+                            </ScrollAnimation>
+                        ))}
                     </div>
                 </div>
             </section>
