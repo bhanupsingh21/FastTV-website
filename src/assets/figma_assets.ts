@@ -111,8 +111,8 @@ import wnBessharam2_src from './figma/wn_bessharam2.png';
 import wnMakeMeUp_src from './figma/wn_make_me_up.png';
 import wnMastiExpress_src from './figma/wn_masti_express.png';
 import wnKaamraj_src from './figma/wn_kaamraj.png';
-import videoDemo_src from './figma/8156009882.mp4';
-import videoHero_src from './figma/735757935973579357.mp4';
+import videoDemo_src from './figma/fasttv_demo.mp4';
+import videoHero_src from './figma/fasttv_hero.mp4';
 import mobileFrame_src from './figma/mobile_frame.png';
 import imgNavigationLogo_src from './figma/navigation_fastTV_logo.svg';
 
