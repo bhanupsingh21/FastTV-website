@@ -31,7 +31,7 @@ export default function ContactUs() {
     ];
 
     return (
-        <div className="pt-32 pb-20 min-h-screen relative overflow-hidden">
+        <div className="pt-32 pb-20 min-h-screen relative overflow-hidden isolate">
             {/* Background Image */}
             <div className="absolute top-0 left-0 w-full h-[1200px] pointer-events-none -z-10">
                 <img
