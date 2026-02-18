@@ -38,7 +38,7 @@ export default function Footer() {
                         </div>
                         <div className="space-y-6 md:pt-10"> {/* Offset for aligning with first col header */}
                             <ul className="space-y-4">
-                                <li><a href="#" className="text-[16px] opacity-50 hover:opacity-100 transition-opacity">Contact Us</a></li>
+                                <li><Link to="/contact-us" className="text-[16px] opacity-50 hover:opacity-100 transition-opacity">Contact Us</Link></li>
                                 <li><Link to="/terms-conditions" className="text-[16px] opacity-50 hover:opacity-100 transition-opacity">Terms & Conditions</Link></li>
                                 <li><Link to="/privacy-policy" className="text-[16px] opacity-50 hover:opacity-100 transition-opacity">Privacy Policy</Link></li>
                                 <li><a href="#" className="text-[16px] opacity-50 hover:opacity-100 transition-opacity">FAQs</a></li>

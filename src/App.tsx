@@ -9,6 +9,7 @@ import SeriesDemoPlayer from './pages/SeriesDemoPlayer';
 import SeriesDemoPlayerDownload from './pages/SeriesDemoPlayerDownload';
 import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -20,10 +21,10 @@ function App() {
         <Route path="/top-series" element={<TopSeries />} />
         <Route path="/whats-new" element={<WhatsNew />} />
         <Route path="/player" element={<SeriesDemoPlayer />} />
-        <Route path="/player" element={<SeriesDemoPlayer />} />
         <Route path="/player-download" element={<SeriesDemoPlayerDownload />} />
         <Route path="/terms-conditions" element={<TermsOfUse />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer />
     </div>
