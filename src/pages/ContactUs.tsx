@@ -33,14 +33,15 @@ export default function ContactUs() {
     return (
         <div className="pt-32 pb-20 min-h-screen relative overflow-hidden">
             {/* Background Image */}
+            {/* Background Image */}
             <div className="absolute top-0 left-0 w-full h-[1200px] pointer-events-none -z-10">
                 <img
-                    src={assets.imgBg}
+                    src={assets.imgPoster4CopyHor1}
                     alt="Background"
-                    className="w-full h-full object-cover opacity-30 mask-image-b-fade"
+                    className="w-full h-full object-cover opacity-40 mask-image-b-fade"
                     style={{ maskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)' }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#040406]/80 via-[#040406]/90 to-[#040406]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#040406]/60 via-[#040406]/80 to-[#040406]" />
             </div>
 
             {/* Contact Form Section */}
@@ -119,6 +120,10 @@ export default function ContactUs() {
             {/* FAQ Section */}
             <section className="container mx-auto px-6 pt-20 border-t border-white/5">
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 relative max-w-6xl mx-auto">
+                    {/* Background Elements - Blue Glow */}
+                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10 opacity-30">
+                        <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-[#009cdb]/20 blur-[100px] rounded-full" />
+                    </div>
                     {/* Left: Header */}
                     <div className="lg:w-1/3">
                         <ScrollAnimation>
